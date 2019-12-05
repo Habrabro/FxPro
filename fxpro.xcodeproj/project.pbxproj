@@ -13,7 +13,9 @@
 		8409F3872397D3D700B91F67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8409F3852397D3D700B91F67 /* Main.storyboard */; };
 		8409F3892397D3D900B91F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8409F3882397D3D900B91F67 /* Assets.xcassets */; };
 		8409F38C2397D3D900B91F67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8409F38A2397D3D900B91F67 /* LaunchScreen.storyboard */; };
-		84AE65BE2397F618001D8919 /* RegistrationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE65BD2397F618001D8919 /* RegistrationTextField.swift */; };
+		84AE65BE2397F618001D8919 /* UITextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE65BD2397F618001D8919 /* UITextViewExtension.swift */; };
+		84AE65C0239954ED001D8919 /* DetailsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE65BF239954ED001D8919 /* DetailsTextView.swift */; };
+		84AE65C2239989EA001D8919 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE65C1239989EA001D8919 /* PrimaryButton.swift */; };
 		D18EC573B3C5C2EEC3C5DADB /* libPods-fxpro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3641C06E7ABD813F7D6B5ED8 /* libPods-fxpro.a */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +30,9 @@
 		8409F3882397D3D900B91F67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8409F38B2397D3D900B91F67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8409F38D2397D3D900B91F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84AE65BD2397F618001D8919 /* RegistrationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTextField.swift; sourceTree = "<group>"; };
+		84AE65BD2397F618001D8919 /* UITextViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtension.swift; sourceTree = "<group>"; };
+		84AE65BF239954ED001D8919 /* DetailsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTextView.swift; sourceTree = "<group>"; };
+		84AE65C1239989EA001D8919 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		CCC53B40E2B69A192741212A /* Pods-fxpro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fxpro.release.xcconfig"; path = "Target Support Files/Pods-fxpro/Pods-fxpro.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,10 +69,10 @@
 		8409F37E2397D3D700B91F67 /* fxpro */ = {
 			isa = PBXGroup;
 			children = (
+				84AE65C323998CE7001D8919 /* UI */,
 				84AE65BC2397F5D2001D8919 /* ViewControllers */,
 				8409F37F2397D3D700B91F67 /* AppDelegate.swift */,
 				8409F3812397D3D700B91F67 /* SceneDelegate.swift */,
-				84AE65BD2397F618001D8919 /* RegistrationTextField.swift */,
 				8409F3852397D3D700B91F67 /* Main.storyboard */,
 				8409F3882397D3D900B91F67 /* Assets.xcassets */,
 				8409F38A2397D3D900B91F67 /* LaunchScreen.storyboard */,
@@ -83,6 +87,16 @@
 				8409F3832397D3D700B91F67 /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		84AE65C323998CE7001D8919 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				84AE65BF239954ED001D8919 /* DetailsTextView.swift */,
+				84AE65C1239989EA001D8919 /* PrimaryButton.swift */,
+				84AE65BD2397F618001D8919 /* UITextViewExtension.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		8F466052E217B8BE34E20A11 /* Frameworks */ = {
@@ -217,9 +231,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84AE65C2239989EA001D8919 /* PrimaryButton.swift in Sources */,
+				84AE65C0239954ED001D8919 /* DetailsTextView.swift in Sources */,
 				8409F3842397D3D700B91F67 /* ViewController.swift in Sources */,
 				8409F3802397D3D700B91F67 /* AppDelegate.swift in Sources */,
-				84AE65BE2397F618001D8919 /* RegistrationTextField.swift in Sources */,
+				84AE65BE2397F618001D8919 /* UITextViewExtension.swift in Sources */,
 				8409F3822397D3D700B91F67 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

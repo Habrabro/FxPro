@@ -13,9 +13,7 @@ class ViewController: UIViewController {
 
     // MARK: Outlets
     
-    @IBOutlet weak var residentialAddressLabel: UILabel!
-    @IBOutlet weak var streetAndNumberTextField: TweeActiveTextField!
-    @IBOutlet weak var postalZipCodeTextField: TweeBorderedTextField!
+    @IBOutlet weak var emailSubscriptionsDetailsTextView: DetailsTextView!
     
     // MARK: Public properties
     
@@ -26,7 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        emailSubscriptionsDetailsTextView.setupAttributes()
     }
     
     // MARK: Public methods
