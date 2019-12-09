@@ -1,0 +1,26 @@
+PODS:
+  - FlagPhoneNumber (0.8.0):
+    - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
+  - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
+  - IQKeyboardManagerSwift (6.5.4)
+  - TweeTextField (1.6.0)
+
+DEPENDENCIES:
+  - FlagPhoneNumber
+  - IQKeyboardManagerSwift
+  - TweeTextField
+
+SPEC REPOS:
+  trunk:
+    - FlagPhoneNumber
+    - IQKeyboardManagerSwift
+    - TweeTextField
+
+SPEC CHECKSUMS:
+  FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
+  IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
+  TweeTextField: 2bfb6c48fdbf6eb8038260430244c9f6ebb47bce
+
+PODFILE CHECKSUM: dcbcc7422271f900792d3603f8aa50ab9e7828d3
+
+COCOAPODS: 1.8.4

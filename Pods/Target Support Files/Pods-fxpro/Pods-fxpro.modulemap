@@ -1,0 +1,6 @@
+module Pods_fxpro {
+  umbrella header "Pods-fxpro-umbrella.h"
+
+  export *
+  module * { export * }
+}
