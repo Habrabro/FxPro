@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8402553C239D322500495F19 /* PhoneNumberForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402553B239D322400495F19 /* PhoneNumberForm.swift */; };
 		8402553E239D80EA00495F19 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402553D239D80EA00495F19 /* String+Extension.swift */; };
 		84025540239D837300495F19 /* NSRegularExpression+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402553F239D837300495F19 /* NSRegularExpression+Extension.swift */; };
 		84025546239DA3B200495F19 /* RegexValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84025545239DA3B200495F19 /* RegexValidator.swift */; };
@@ -23,6 +22,7 @@
 		8409F3892397D3D900B91F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8409F3882397D3D900B91F67 /* Assets.xcassets */; };
 		8409F38C2397D3D900B91F67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8409F38A2397D3D900B91F67 /* LaunchScreen.storyboard */; };
 		84714878239BC59D003C5EE3 /* CountriesPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84714877239BC59D003C5EE3 /* CountriesPickerViewController.swift */; };
+		8497DAF2239ED9E800F4E346 /* ContactNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497DAF1239ED9E800F4E346 /* ContactNumberTextField.swift */; };
 		84AE65BE2397F618001D8919 /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE65BD2397F618001D8919 /* UITextView+Extensions.swift */; };
 		84AE65C0239954ED001D8919 /* DetailsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE65BF239954ED001D8919 /* DetailsTextView.swift */; };
 		84AE65C2239989EA001D8919 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE65C1239989EA001D8919 /* PrimaryButton.swift */; };
@@ -32,7 +32,6 @@
 /* Begin PBXFileReference section */
 		3641C06E7ABD813F7D6B5ED8 /* libPods-fxpro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fxpro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6527BDFEAC5B96ADD59B2F6F /* Pods-fxpro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fxpro.debug.xcconfig"; path = "Target Support Files/Pods-fxpro/Pods-fxpro.debug.xcconfig"; sourceTree = "<group>"; };
-		8402553B239D322400495F19 /* PhoneNumberForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberForm.swift; sourceTree = "<group>"; };
 		8402553D239D80EA00495F19 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		8402553F239D837300495F19 /* NSRegularExpression+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRegularExpression+Extension.swift"; sourceTree = "<group>"; };
 		84025545239DA3B200495F19 /* RegexValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexValidator.swift; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		8409F38B2397D3D900B91F67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8409F38D2397D3D900B91F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84714877239BC59D003C5EE3 /* CountriesPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesPickerViewController.swift; sourceTree = "<group>"; };
+		8497DAF1239ED9E800F4E346 /* ContactNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactNumberTextField.swift; sourceTree = "<group>"; };
 		84AE65BD2397F618001D8919 /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
 		84AE65BF239954ED001D8919 /* DetailsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTextView.swift; sourceTree = "<group>"; };
 		84AE65C1239989EA001D8919 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -83,8 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				84028A8E239A84C300A6A612 /* Validator.swift */,
-				84025545239DA3B200495F19 /* RegexValidator.swift */,
 				84028A90239A871600A6A612 /* ValidatorFactory.swift */,
+				84025545239DA3B200495F19 /* RegexValidator.swift */,
 				84039965239EABE3005AD6F7 /* DateOfBirthValidator.swift */,
 			);
 			path = Validation;
@@ -139,8 +139,8 @@
 			children = (
 				84AE65BF239954ED001D8919 /* DetailsTextView.swift */,
 				84AE65C1239989EA001D8919 /* PrimaryButton.swift */,
-				8402553B239D322400495F19 /* PhoneNumberForm.swift */,
 				84039963239E7F17005AD6F7 /* ValidatableTextField.swift */,
+				8497DAF1239ED9E800F4E346 /* ContactNumberTextField.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -280,6 +280,7 @@
 				84025546239DA3B200495F19 /* RegexValidator.swift in Sources */,
 				84AE65C2239989EA001D8919 /* PrimaryButton.swift in Sources */,
 				84AE65C0239954ED001D8919 /* DetailsTextView.swift in Sources */,
+				8497DAF2239ED9E800F4E346 /* ContactNumberTextField.swift in Sources */,
 				8409F3842397D3D700B91F67 /* ViewController.swift in Sources */,
 				84028A95239ADCD300A6A612 /* UIImage+Resize.swift in Sources */,
 				8409F3802397D3D700B91F67 /* AppDelegate.swift in Sources */,
@@ -292,7 +293,6 @@
 				8409F3822397D3D700B91F67 /* SceneDelegate.swift in Sources */,
 				84025540239D837300495F19 /* NSRegularExpression+Extension.swift in Sources */,
 				84028A91239A871600A6A612 /* ValidatorFactory.swift in Sources */,
-				8402553C239D322500495F19 /* PhoneNumberForm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

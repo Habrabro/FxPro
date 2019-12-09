@@ -22,8 +22,6 @@ class PrimaryButton: UIButton {
         }
     }
     
-    // MARK: Private properties
-    
     // MARK: Initializers
     
     override init(frame aFrame: CGRect) {

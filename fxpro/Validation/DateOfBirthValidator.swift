@@ -10,10 +10,14 @@ import Foundation
 
 class DateOfBirthValidator: Validator {
     
+    // MARK: Constants
+    
     let PATTERN = "MM.dd.yyyy"
     let SUCCESS_MESSAGE = "Validated"
     let INVALID_DATE_FORMAT_MESSAGE = "Provide a valid format of date"
     let FUTURE_DATE_MESSAGE = "You could not be born in the future"
+    
+    // MARK: Public methods
     
     func validate(_ data: String, completion: (Bool, String) -> ()) {
         let currentDate = Date()

@@ -11,8 +11,15 @@ import TweeTextField
 
 class ValidatableTextField: TweeAttributedTextField {
     
-    private var isDataValid: Bool = false
+    // MARK: Public properties
+    
+    var isDataValid: Bool = false
+    
+    // MARK: Private properties
+    
     private var validator: Validator?
+    
+    // MARK: Public methods
     
     func setup(validator: Validator) {
         self.validator = validator
@@ -27,6 +34,7 @@ class ValidatableTextField: TweeAttributedTextField {
     func validate() {
         guard let validator = validator, let text = text else { return }
         validator.validate(text, completion: { isValid, message in
+            isDataValid = isValid
             if isValid {
                 hideInfo()
                 rightView?.isHidden = false                
@@ -36,6 +44,8 @@ class ValidatableTextField: TweeAttributedTextField {
             }
         })
     }
+    
+    // MARK: Selectors
     
     @objc private func editingDidEnd() {
         validate()

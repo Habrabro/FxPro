@@ -36,6 +36,8 @@ class DetailsTextView: UITextView {
         super.init(coder: aCoder)
     }
     
+    // MARK: Public methods
+    
     func setupAttributes() {
         let text = self.text!
         let fontName = self.font!.familyName

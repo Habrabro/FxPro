@@ -10,6 +10,14 @@ import UIKit
 import TweeTextField
 import FlagPhoneNumber
 
+enum Fields {
+    case streetAndNumber
+    case postalZipCode
+    case cityTown
+    case nationality
+    case dateOfBirth
+}
+
 class ViewController: UIViewController {
 
     // MARK: Outlets
@@ -17,7 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var streetAndNumberTextField: ValidatableTextField!
     @IBOutlet weak var postalZipCodeTextField: ValidatableTextField!
     @IBOutlet weak var cityTownTextField: ValidatableTextField!
-    @IBOutlet weak var nationalityTextField: TweeAttributedTextField!
+    @IBOutlet weak var nationalityTextField: ValidatableTextField!
     @IBOutlet weak var dateOfBirthTextField: ValidatableTextField!
     @IBOutlet weak var countryCodeTextField: TweeAttributedTextField!
     @IBOutlet weak var contactNumberTextField: TweeAttributedTextField!
@@ -56,6 +64,9 @@ class ViewController: UIViewController {
         
         // nationalityTextField
         
+        let nationalityValidator = ValidatorFactory.validatorFor(type: .nationality)
+        nationalityTextField.setup(validator: nationalityValidator)
+        
         var image = UIImage(named: "expandableIcon")
         image = UIImage.resize(image: image!, targetSize: CGSize(width: 12, height: 12))
         let expandableIconImageView = UIImageView(image: image)
@@ -82,6 +93,8 @@ class ViewController: UIViewController {
         countryCodeTextField.leftViewMode = .always
         countryCodeTextField.leftView = plusSymbolLabel
         
+        // contactNumberTextField
+        
         // emailSubscriptionsDetailsTextView
         
         emailSubscriptionsDetailsTextView.setupAttributes()
@@ -91,7 +104,42 @@ class ViewController: UIViewController {
     
     // MARK: Actions
     
+    @IBAction func nextStepButtonDidTap(_ sender: Any) {
+        if areFieldsValid() {
+            let fields: [Fields: String] = [
+                .streetAndNumber: streetAndNumberTextField.text!,
+                .postalZipCode: postalZipCodeTextField.text!,
+                .cityTown: cityTownTextField.text!,
+                .nationality: nationalityTextField.text!,
+                .dateOfBirth: dateOfBirthTextField.text!,
+            ]
+            //...
+        }
+    }
+    
+    
     // MARK: Private methods
+    
+    private func areFieldsValid() -> Bool {
+        if streetAndNumberTextField.isDataValid &&
+        postalZipCodeTextField.isDataValid &&
+        cityTownTextField.isDataValid &&
+        nationalityTextField.isDataValid &&
+        dateOfBirthTextField.isDataValid {
+            return true
+        } else {
+            validateAllTextFields()
+            return false
+        }
+    }
+    
+    private func validateAllTextFields() {
+        streetAndNumberTextField.validate()
+        postalZipCodeTextField.validate()
+        cityTownTextField.validate()
+        nationalityTextField.validate()
+        dateOfBirthTextField.validate()
+    }
     
     // MARK: Selectors
     
@@ -119,5 +167,6 @@ extension ViewController: CountriesPickerDelegate {
         
     func countriesPicker(_ picker: CountriesPickerViewController, didFinishPickingCountry country: String) {
         nationalityTextField.text = country
+        nationalityTextField.validate()
     }
 }
