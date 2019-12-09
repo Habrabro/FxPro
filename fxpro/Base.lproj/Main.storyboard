@@ -15,6 +15,9 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qzp-pB-Bd7">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="zNZ-vX-ueA" kind="relationship" relationship="rootViewController" id="g59-Oa-e86"/>
                     </connections>
@@ -52,13 +55,13 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="AsO-Cj-LCz">
                                                                 <rect key="frame" x="0.0" y="64" width="374" height="187"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XOT-Ui-rxi" customClass="TweeAttributedTextField" customModule="TweeTextField">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XOT-Ui-rxi" customClass="ValidatableTextField" customModule="fxpro" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="35" id="BxR-LO-RwB"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" textContentType="location"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Street &amp; Number"/>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -91,15 +94,21 @@
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="minimumPlaceholderFontSize">
                                                                                 <real key="value" value="13"/>
                                                                             </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="infoAnimationDuration">
+                                                                                <real key="value" value="0.29999999999999999"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="infoFontSize">
+                                                                                <real key="value" value="13"/>
+                                                                            </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </textField>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NtD-cd-OY6" customClass="TweeAttributedTextField" customModule="TweeTextField">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NtD-cd-OY6" customClass="ValidatableTextField" customModule="fxpro" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="76" width="374" height="35"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="35" id="8WP-f5-BDt"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="postal-code"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Postal / Zip Code"/>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
@@ -132,15 +141,21 @@
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="minimumPlaceholderFontSize">
                                                                                 <real key="value" value="13"/>
                                                                             </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="infoAnimationDuration">
+                                                                                <real key="value" value="0.29999999999999999"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="infoFontSize">
+                                                                                <real key="value" value="13"/>
+                                                                            </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </textField>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4hx-zq-iTM" customClass="TweeAttributedTextField" customModule="TweeTextField">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4hx-zq-iTM" customClass="ValidatableTextField" customModule="fxpro" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="152" width="374" height="35"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="35" id="hbO-88-mN1"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" textContentType="address-level2"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="City / Town"/>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
@@ -171,6 +186,12 @@
                                                                                 <real key="value" value="18"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="minimumPlaceholderFontSize">
+                                                                                <real key="value" value="13"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="infoAnimationDuration">
+                                                                                <real key="value" value="0.29999999999999999"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="infoFontSize">
                                                                                 <real key="value" value="13"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
@@ -240,9 +261,15 @@
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="minimumPlaceholderFontSize">
                                                                                 <real key="value" value="13"/>
                                                                             </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="infoAnimationDuration">
+                                                                                <real key="value" value="0.29999999999999999"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="infoFontSize">
+                                                                                <real key="value" value="13"/>
+                                                                            </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </textField>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5PI-LL-T9F" customClass="TweeAttributedTextField" customModule="TweeTextField">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5PI-LL-T9F" customClass="ValidatableTextField" customModule="fxpro" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="76" width="374" height="35"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="35" id="A5i-t3-BtG"/>
@@ -281,6 +308,12 @@
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="minimumPlaceholderFontSize">
                                                                                 <real key="value" value="13"/>
                                                                             </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="infoAnimationDuration">
+                                                                                <real key="value" value="0.29999999999999999"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="infoFontSize">
+                                                                                <real key="value" value="13"/>
+                                                                            </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </textField>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDK-Kf-nVQ">
@@ -293,7 +326,7 @@
                                                                                     <constraint firstAttribute="width" constant="60" id="nvK-PS-dKj"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Code"/>
                                                                                     <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
@@ -326,6 +359,12 @@
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="minimumPlaceholderFontSize">
                                                                                         <real key="value" value="13"/>
                                                                                     </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="infoAnimationDuration">
+                                                                                        <real key="value" value="0.29999999999999999"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="infoFontSize">
+                                                                                        <real key="value" value="13"/>
+                                                                                    </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </textField>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R53-hW-20f" customClass="TweeAttributedTextField" customModule="TweeTextField">
@@ -334,7 +373,7 @@
                                                                                     <constraint firstAttribute="height" constant="35" id="wQD-pu-6LV"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                                <textInputTraits key="textInputTraits"/>
+                                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Your Contact Number"/>
                                                                                     <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
@@ -365,6 +404,12 @@
                                                                                         <real key="value" value="18"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="minimumPlaceholderFontSize">
+                                                                                        <real key="value" value="13"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="infoAnimationDuration">
+                                                                                        <real key="value" value="0.29999999999999999"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="infoFontSize">
                                                                                         <real key="value" value="13"/>
                                                                                     </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
@@ -494,12 +539,47 @@
                     <navigationItem key="navigationItem" id="9H7-x3-XAL"/>
                     <connections>
                         <outlet property="EmailSubscriptionsDetailsTextView" destination="xYD-c5-6Gy" id="GpC-9y-fKD"/>
+                        <outlet property="cityTownTextField" destination="4hx-zq-iTM" id="sAZ-It-zNj"/>
+                        <outlet property="contactNumberTextField" destination="R53-hW-20f" id="n5S-AS-Hil"/>
+                        <outlet property="countryCodeTextField" destination="36s-O1-hZA" id="768-uP-eLf"/>
+                        <outlet property="dateOfBirthTextField" destination="5PI-LL-T9F" id="KH1-oj-x0c"/>
                         <outlet property="emailSubscriptionsDetailsTextView" destination="xYD-c5-6Gy" id="R7I-5d-fdy"/>
+                        <outlet property="nationalityTextField" destination="fIj-3j-taV" id="HMV-c7-XlZ"/>
+                        <outlet property="postalZipCodeTextField" destination="NtD-cd-OY6" id="EYF-6A-gto"/>
+                        <outlet property="streetAndNumberTextField" destination="XOT-Ui-rxi" id="gqk-Z9-g1G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="937.68115942028987" y="97.767857142857139"/>
+        </scene>
+        <!--Countries Picker View Controller-->
+        <scene sceneID="kLB-Cm-U4E">
+            <objects>
+                <tableViewController storyboardIdentifier="CountriesPickerViewController" id="yGW-mG-U4K" customClass="CountriesPickerViewController" customModule="fxpro" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sa2-pb-j7l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="countryCell" id="Atg-DB-oFE">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Atg-DB-oFE" id="buB-wA-xfE">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yGW-mG-U4K" id="WzP-B7-ztt"/>
+                            <outlet property="delegate" destination="yGW-mG-U4K" id="p3v-a5-8D9"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1CQ-yg-ErS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1803" y="98"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="JLk-rO-4gR">

@@ -44,7 +44,7 @@ class DetailsTextView: UITextView {
         let attributes = [
             NSAttributedString.Key.paragraphStyle : style,
             NSAttributedString.Key.font: UIFont(name: fontName, size: fontSize)!,
-            NSAttributedString.Key.foregroundColor: color
+            NSAttributedString.Key.foregroundColor: color!
         ]
         self.attributedText = NSAttributedString(string: text, attributes: attributes)
     }
