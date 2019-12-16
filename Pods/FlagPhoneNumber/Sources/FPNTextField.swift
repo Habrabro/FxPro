@@ -369,7 +369,7 @@ open class FPNTextField: UITextField {
 		}
 	}
 
-	private func updateUI() {
+	public func updateUI() {
 		if let countryCode = selectedCountry?.code {
 			formatter = NBAsYouTypeFormatter(regionCode: countryCode.rawValue)
 		}

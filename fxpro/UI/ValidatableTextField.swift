@@ -24,7 +24,9 @@ class ValidatableTextField: TweeAttributedTextField {
     func setup(validator: Validator) {
         self.validator = validator
         
-        rightView = UIImageView(image: UIImage(named: "validIcon"))
+        let imageView = UIImageView(image: UIImage(named: "validIcon"))
+        rightView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: imageView.frame.width, height: self.frame.height)))
+        rightView!.addSubview(imageView)
         rightView!.isHidden = true
         rightViewMode = .always
         

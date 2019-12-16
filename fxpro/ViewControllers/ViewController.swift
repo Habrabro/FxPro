@@ -28,9 +28,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var nationalityTextField: ValidatableTextField!
     @IBOutlet weak var dateOfBirthTextField: ValidatableTextField!
     @IBOutlet weak var countryCodeTextField: TweeAttributedTextField!
-    @IBOutlet weak var contactNumberTextField: TweeAttributedTextField!
+    @IBOutlet weak var contactNumberTextField: ContactNumberTextField!
     
     @IBOutlet weak var emailSubscriptionsDetailsTextView: DetailsTextView!
+    
+    @IBOutlet weak var testFPNTextField: FPNTextField!
+    
     
     // MARK: Public properties
     
@@ -43,6 +46,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        testFPNTextField.setFlag(countryCode: .RU)
+        
+        contactNumberTextField.fpnTextField = testFPNTextField
+        
         
         let dismissTapGesture = UITapGestureRecognizer(target: self, action: #selector(didDoneTap))
         self.view.addGestureRecognizer(dismissTapGesture)
