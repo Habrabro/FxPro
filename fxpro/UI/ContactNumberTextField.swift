@@ -8,11 +8,25 @@
 
 import Foundation
 import TweeTextField
-import FlagPhoneNumber
+import PhoneNumberKit
 
 class ContactNumberTextField: ValidatableTextField {
     
-    var fpnTextField: FPNTextField?
+    // MARK: Constants
+    
+    let COUNTRY_OF_RESIDENCE_CODE = "RU"
+    
+    // MARK: Private properties
+    
+    private let phoneNumberTextField = CustomPhoneNumberTextField()
+    private let phoneNumberKit = PhoneNumberKit()
+    
+    private var prefilledPhoneCode: String? {
+        guard let phoneCode = phoneNumberKit.countryCode(for: COUNTRY_OF_RESIDENCE_CODE) else { return nil }
+        return "+" + String(phoneCode)
+    }
+    
+    // MARK: Init
     
     override init(frame aFrame: CGRect) {
         super.init(frame: aFrame)
@@ -22,12 +36,32 @@ class ContactNumberTextField: ValidatableTextField {
         super.init(coder: aCoder)
         
         addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        text = prefilledPhoneCode
+        setCountry(for: COUNTRY_OF_RESIDENCE_CODE)
+    }
+    
+    // MARK: Private methods
+    
+    private func setCountry(for: String) {
+        phoneNumberTextField.setDefaultRegion(to: COUNTRY_OF_RESIDENCE_CODE)
+        phoneNumberTextField.withFlag = true
+        guard let titleLabel = phoneNumberTextField.flagButton.titleLabel else { return }
+        leftView = titleLabel
+        leftViewMode = .always
+                
+    }
+    
+    private func checkForPlusSymbol() {
+        if text!.count == 1, text! != "+" {
+            text! = "+" + text!
+        }
     }
     
     @objc private func editingChanged() {
-        guard let text = text else { return }
-        fpnTextField!.text = text
-        fpnTextField!.updateUI()
-        self.text = fpnTextField!.text
+        guard let text = self.text else { return }
+        phoneNumberTextField.text = text
+        self.text = phoneNumberTextField.text
+        phoneNumberTextField.updateFlag()
+        checkForPlusSymbol()
     }
 }

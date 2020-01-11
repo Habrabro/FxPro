@@ -8,7 +8,7 @@
 
 import UIKit
 import TweeTextField
-import FlagPhoneNumber
+import PhoneNumberKit
 
 enum Fields {
     case streetAndNumber
@@ -16,6 +16,7 @@ enum Fields {
     case cityTown
     case nationality
     case dateOfBirth
+    case contactNumber
 }
 
 class ViewController: UIViewController {
@@ -27,13 +28,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var cityTownTextField: ValidatableTextField!
     @IBOutlet weak var nationalityTextField: ValidatableTextField!
     @IBOutlet weak var dateOfBirthTextField: ValidatableTextField!
-    @IBOutlet weak var countryCodeTextField: TweeAttributedTextField!
     @IBOutlet weak var contactNumberTextField: ContactNumberTextField!
     
-    @IBOutlet weak var emailSubscriptionsDetailsTextView: DetailsTextView!
-    
-    @IBOutlet weak var testFPNTextField: FPNTextField!
-    
+    @IBOutlet weak var emailSubscriptionsDetailsTextView: DetailsTextView!    
     
     // MARK: Public properties
     
@@ -46,11 +43,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        testFPNTextField.setFlag(countryCode: .RU)
-        
-        contactNumberTextField.fpnTextField = testFPNTextField
-        
         
         let dismissTapGesture = UITapGestureRecognizer(target: self, action: #selector(didDoneTap))
         self.view.addGestureRecognizer(dismissTapGesture)
@@ -94,14 +86,10 @@ class ViewController: UIViewController {
         dateOfBirthTextField.inputView = datePicker
         dateFormatter.dateFormat = "MM.dd.yyyy"
         
-        // countryCodeTextField
-        
-        let plusSymbolLabel = UILabel()
-        plusSymbolLabel.text = "+"
-        countryCodeTextField.leftViewMode = .always
-        countryCodeTextField.leftView = plusSymbolLabel
-        
         // contactNumberTextField
+        
+        let contactNumberValidator = ValidatorFactory.validatorFor(type: .contactNumber)
+        contactNumberTextField.setup(validator: contactNumberValidator)
         
         // emailSubscriptionsDetailsTextView
         
@@ -114,12 +102,16 @@ class ViewController: UIViewController {
     
     @IBAction func nextStepButtonDidTap(_ sender: Any) {
         if areFieldsValid() {
+            let contactNumber = contactNumberTextField.text!
+            let formattedContactNumber = contactNumber.replacingOccurrences(of: "[()\\s-]", with: "", options: .regularExpression)
+            
             let fields: [Fields: String] = [
                 .streetAndNumber: streetAndNumberTextField.text!,
                 .postalZipCode: postalZipCodeTextField.text!,
                 .cityTown: cityTownTextField.text!,
                 .nationality: nationalityTextField.text!,
                 .dateOfBirth: dateOfBirthTextField.text!,
+                .contactNumber: formattedContactNumber,
             ]
             //...
         }
@@ -133,7 +125,8 @@ class ViewController: UIViewController {
         postalZipCodeTextField.isDataValid &&
         cityTownTextField.isDataValid &&
         nationalityTextField.isDataValid &&
-        dateOfBirthTextField.isDataValid {
+        dateOfBirthTextField.isDataValid &&
+        contactNumberTextField.isDataValid {
             return true
         } else {
             validateAllTextFields()
@@ -147,6 +140,7 @@ class ViewController: UIViewController {
         cityTownTextField.validate()
         nationalityTextField.validate()
         dateOfBirthTextField.validate()
+        contactNumberTextField.validate()
     }
     
     // MARK: Selectors

@@ -13,8 +13,12 @@
 		84028A8F239A84C300A6A612 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84028A8E239A84C300A6A612 /* Validator.swift */; };
 		84028A91239A871600A6A612 /* ValidatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84028A90239A871600A6A612 /* ValidatorFactory.swift */; };
 		84028A95239ADCD300A6A612 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84028A94239ADCD300A6A612 /* UIImage+Resize.swift */; };
+		8402F0AE23ABAC58002F507A /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402F0AD23ABAC58002F507A /* Base.swift */; };
+		8402F0B023ABAD50002F507A /* Deriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402F0AF23ABAD50002F507A /* Deriver.swift */; };
 		84039964239E7F17005AD6F7 /* ValidatableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84039963239E7F17005AD6F7 /* ValidatableTextField.swift */; };
 		84039966239EABE3005AD6F7 /* DateOfBirthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84039965239EABE3005AD6F7 /* DateOfBirthValidator.swift */; };
+		84080E5923C907D500925E8E /* CustomPhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84080E5823C907D500925E8E /* CustomPhoneNumberTextField.swift */; };
+		84080E5B23C9484700925E8E /* ContactNumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84080E5A23C9484700925E8E /* ContactNumberValidator.swift */; };
 		8409F3802397D3D700B91F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409F37F2397D3D700B91F67 /* AppDelegate.swift */; };
 		8409F3822397D3D700B91F67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409F3812397D3D700B91F67 /* SceneDelegate.swift */; };
 		8409F3842397D3D700B91F67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409F3832397D3D700B91F67 /* ViewController.swift */; };
@@ -38,8 +42,12 @@
 		84028A8E239A84C300A6A612 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		84028A90239A871600A6A612 /* ValidatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorFactory.swift; sourceTree = "<group>"; };
 		84028A94239ADCD300A6A612 /* UIImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		8402F0AD23ABAC58002F507A /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		8402F0AF23ABAD50002F507A /* Deriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deriver.swift; sourceTree = "<group>"; };
 		84039963239E7F17005AD6F7 /* ValidatableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableTextField.swift; sourceTree = "<group>"; };
 		84039965239EABE3005AD6F7 /* DateOfBirthValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthValidator.swift; sourceTree = "<group>"; };
+		84080E5823C907D500925E8E /* CustomPhoneNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPhoneNumberTextField.swift; sourceTree = "<group>"; };
+		84080E5A23C9484700925E8E /* ContactNumberValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactNumberValidator.swift; sourceTree = "<group>"; };
 		8409F37C2397D3D700B91F67 /* fxpro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fxpro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8409F37F2397D3D700B91F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8409F3812397D3D700B91F67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +94,7 @@
 				84028A90239A871600A6A612 /* ValidatorFactory.swift */,
 				84025545239DA3B200495F19 /* RegexValidator.swift */,
 				84039965239EABE3005AD6F7 /* DateOfBirthValidator.swift */,
+				84080E5A23C9484700925E8E /* ContactNumberValidator.swift */,
 			);
 			path = Validation;
 			sourceTree = "<group>";
@@ -121,6 +130,8 @@
 				8409F3882397D3D900B91F67 /* Assets.xcassets */,
 				8409F38A2397D3D900B91F67 /* LaunchScreen.storyboard */,
 				8409F38D2397D3D900B91F67 /* Info.plist */,
+				8402F0AD23ABAC58002F507A /* Base.swift */,
+				8402F0AF23ABAD50002F507A /* Deriver.swift */,
 			);
 			path = fxpro;
 			sourceTree = "<group>";
@@ -141,6 +152,7 @@
 				84AE65C1239989EA001D8919 /* PrimaryButton.swift */,
 				84039963239E7F17005AD6F7 /* ValidatableTextField.swift */,
 				8497DAF1239ED9E800F4E346 /* ContactNumberTextField.swift */,
+				84080E5823C907D500925E8E /* CustomPhoneNumberTextField.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -280,11 +292,15 @@
 				84025546239DA3B200495F19 /* RegexValidator.swift in Sources */,
 				84AE65C2239989EA001D8919 /* PrimaryButton.swift in Sources */,
 				84AE65C0239954ED001D8919 /* DetailsTextView.swift in Sources */,
+				84080E5923C907D500925E8E /* CustomPhoneNumberTextField.swift in Sources */,
 				8497DAF2239ED9E800F4E346 /* ContactNumberTextField.swift in Sources */,
 				8409F3842397D3D700B91F67 /* ViewController.swift in Sources */,
 				84028A95239ADCD300A6A612 /* UIImage+Resize.swift in Sources */,
 				8409F3802397D3D700B91F67 /* AppDelegate.swift in Sources */,
+				8402F0B023ABAD50002F507A /* Deriver.swift in Sources */,
 				84028A8F239A84C300A6A612 /* Validator.swift in Sources */,
+				84080E5B23C9484700925E8E /* ContactNumberValidator.swift in Sources */,
+				8402F0AE23ABAC58002F507A /* Base.swift in Sources */,
 				84039966239EABE3005AD6F7 /* DateOfBirthValidator.swift in Sources */,
 				8402553E239D80EA00495F19 /* String+Extension.swift in Sources */,
 				84AE65BE2397F618001D8919 /* UITextView+Extensions.swift in Sources */,

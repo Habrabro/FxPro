@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="18C-NH-q41">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="18C-NH-q41">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,10 +38,10 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f00-pd-Ca3" userLabel="Scroll View Content">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="913"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJJ-UF-eMw" userLabel="Main Container">
-                                                <rect key="frame" x="20" y="30" width="374" height="853"/>
+                                                <rect key="frame" x="20" y="30" width="374" height="778"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7XK-0D-EXP" userLabel="Residential Address Section">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="251"/>
@@ -211,7 +211,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lbb-Ql-PuD" userLabel="Personal Details Section">
-                                                        <rect key="frame" x="0.0" y="286" width="374" height="326"/>
+                                                        <rect key="frame" x="0.0" y="286" width="374" height="251"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Personal Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8A-rU-eUs">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="29"/>
@@ -220,7 +220,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="Tcw-vX-dec">
-                                                                <rect key="frame" x="0.0" y="64" width="374" height="262"/>
+                                                                <rect key="frame" x="0.0" y="64" width="374" height="187"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fIj-3j-taV" customClass="ValidatableTextField" customModule="fxpro" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
@@ -316,13 +316,8 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </textField>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vbm-Do-s05" customClass="FPNTextField" customModule="FlagPhoneNumber">
-                                                                        <rect key="frame" x="0.0" y="152" width="374" height="34"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
-                                                                    </textField>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R53-hW-20f" customClass="ContactNumberTextField" customModule="fxpro" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="227" width="374" height="35"/>
+                                                                        <rect key="frame" x="0.0" y="152" width="374" height="35"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="35" id="wQD-pu-6LV"/>
                                                                         </constraints>
@@ -368,66 +363,6 @@
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </textField>
-                                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDK-Kf-nVQ">
-                                                                        <rect key="frame" x="0.0" y="262" width="374" height="35"/>
-                                                                        <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="36s-O1-hZA" customClass="TweeAttributedTextField" customModule="TweeTextField">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="35"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="35" id="9lh-03-6Kt"/>
-                                                                                    <constraint firstAttribute="width" constant="60" id="nvK-PS-dKj"/>
-                                                                                </constraints>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                                                <userDefinedRuntimeAttributes>
-                                                                                    <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Code"/>
-                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                                                        <color key="value" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                    </userDefinedRuntimeAttribute>
-                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                                                                        <real key="value" value="1"/>
-                                                                                    </userDefinedRuntimeAttribute>
-                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                    </userDefinedRuntimeAttribute>
-                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderDuration">
-                                                                                        <real key="value" value="0.29999999999999999"/>
-                                                                                    </userDefinedRuntimeAttribute>
-                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="activeLineColor">
-                                                                                        <color key="value" red="0.1019607843" green="0.4549019608" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                    </userDefinedRuntimeAttribute>
-                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="infoTextColor">
-                                                                                        <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                    </userDefinedRuntimeAttribute>
-                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="activeLineWidth">
-                                                                                        <real key="value" value="1"/>
-                                                                                    </userDefinedRuntimeAttribute>
-                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="animationDuration">
-                                                                                        <real key="value" value="0.29999999999999999"/>
-                                                                                    </userDefinedRuntimeAttribute>
-                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="originalPlaceholderFontSize">
-                                                                                        <real key="value" value="18"/>
-                                                                                    </userDefinedRuntimeAttribute>
-                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumPlaceholderFontSize">
-                                                                                        <real key="value" value="13"/>
-                                                                                    </userDefinedRuntimeAttribute>
-                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="infoAnimationDuration">
-                                                                                        <real key="value" value="0.29999999999999999"/>
-                                                                                    </userDefinedRuntimeAttribute>
-                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="infoFontSize">
-                                                                                        <real key="value" value="13"/>
-                                                                                    </userDefinedRuntimeAttribute>
-                                                                                </userDefinedRuntimeAttributes>
-                                                                            </textField>
-                                                                        </subviews>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="top" secondItem="36s-O1-hZA" secondAttribute="bottom" constant="-35" id="1DK-P3-4Vq"/>
-                                                                            <constraint firstAttribute="bottom" secondItem="36s-O1-hZA" secondAttribute="bottom" id="Atc-4m-yFx"/>
-                                                                            <constraint firstItem="36s-O1-hZA" firstAttribute="top" secondItem="fDK-Kf-nVQ" secondAttribute="top" id="QxD-fI-Jfa"/>
-                                                                            <constraint firstItem="36s-O1-hZA" firstAttribute="leading" secondItem="fDK-Kf-nVQ" secondAttribute="leading" id="bmM-jd-CDF"/>
-                                                                        </constraints>
-                                                                    </view>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
@@ -443,7 +378,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zzf-dL-Ywd" userLabel="E-mail Subscriptions Section">
-                                                        <rect key="frame" x="0.0" y="647" width="374" height="96"/>
+                                                        <rect key="frame" x="0.0" y="572" width="374" height="96"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="E-mail Subscriptions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmE-f3-jue">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="29"/>
@@ -477,7 +412,7 @@
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OH-X2-xnF" customClass="PrimaryButton" customModule="fxpro" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="768" width="354" height="50"/>
+                                                        <rect key="frame" x="10" y="693" width="354" height="50"/>
                                                         <color key="backgroundColor" red="0.14901960784313725" green="0.51764705882352935" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="LaT-pV-9LG"/>
@@ -546,13 +481,11 @@
                         <outlet property="EmailSubscriptionsDetailsTextView" destination="xYD-c5-6Gy" id="GpC-9y-fKD"/>
                         <outlet property="cityTownTextField" destination="4hx-zq-iTM" id="sAZ-It-zNj"/>
                         <outlet property="contactNumberTextField" destination="R53-hW-20f" id="n5S-AS-Hil"/>
-                        <outlet property="countryCodeTextField" destination="36s-O1-hZA" id="768-uP-eLf"/>
                         <outlet property="dateOfBirthTextField" destination="5PI-LL-T9F" id="KH1-oj-x0c"/>
                         <outlet property="emailSubscriptionsDetailsTextView" destination="xYD-c5-6Gy" id="R7I-5d-fdy"/>
                         <outlet property="nationalityTextField" destination="fIj-3j-taV" id="HMV-c7-XlZ"/>
                         <outlet property="postalZipCodeTextField" destination="NtD-cd-OY6" id="EYF-6A-gto"/>
                         <outlet property="streetAndNumberTextField" destination="XOT-Ui-rxi" id="gqk-Z9-g1G"/>
-                        <outlet property="testFPNTextField" destination="vbm-Do-s05" id="clB-Sm-QKn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

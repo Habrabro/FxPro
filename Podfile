@@ -6,7 +6,11 @@ target 'fxpro' do
   # use_frameworks!
   pod 'TweeTextField'
   pod 'IQKeyboardManagerSwift'
-  pod "FlagPhoneNumber"
+#  pod "FlagPhoneNumber"
+  source 'git@github.com:CocoaPods/Specs.git'
+  pod 'PhoneNumberKit', '~> 3.1'
+#  source 'https://github.com/CocoaPods/Specs.git'
+#  pod 'libPhoneNumber-iOS', '~> 0.8'
   
   # Pods for fxpro
 

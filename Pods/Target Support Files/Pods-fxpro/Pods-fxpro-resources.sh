@@ -97,12 +97,12 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/FlagPhoneNumber/FlagPhoneNumber.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.bundle"
+  install_resource "${PODS_ROOT}/PhoneNumberKit/PhoneNumberKit/Resources/PhoneNumberMetadata.json"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/FlagPhoneNumber/FlagPhoneNumber.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.bundle"
+  install_resource "${PODS_ROOT}/PhoneNumberKit/PhoneNumberKit/Resources/PhoneNumberMetadata.json"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

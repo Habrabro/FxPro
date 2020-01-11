@@ -14,6 +14,7 @@ enum ValidatorType {
     case cityTown
     case nationality
     case dateOfBirth
+    case contactNumber
     case requiredField
 }
 
@@ -32,6 +33,7 @@ class ValidatorFactory {
         case .cityTown: return RegexValidator(expression: "^\\s*\\p{L}+(?:[\\s-]\\p{L}+)*\\s*$", successMessage: DEFAULT_SUCCESS_MESSAGE, failureMessage: "Provide a valid city or town name")
         case .nationality: return RegexValidator(expression: ".+", successMessage: DEFAULT_SUCCESS_MESSAGE, failureMessage: "Select your nationality from the list")
         case .dateOfBirth: return DateOfBirthValidator()
+        case .contactNumber: return ContactNumberValidator()
         case .requiredField: return RegexValidator(expression: ".+", successMessage: DEFAULT_SUCCESS_MESSAGE, failureMessage: "This is a required field")
         }
     }
