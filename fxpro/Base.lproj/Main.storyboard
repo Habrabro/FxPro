@@ -198,15 +198,24 @@
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
+                                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lzq-Uo-efs" customClass="PasswordHintView" customModule="fxpro" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="160" width="374" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" priority="750" constant="30" id="ERv-Fc-SNt"/>
+                                                                    <constraint firstAttribute="width" constant="374" id="b3x-Na-sET"/>
+                                                                </constraints>
+                                                            </view>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="AsO-Cj-LCz" secondAttribute="trailing" id="76B-fP-8dw"/>
                                                             <constraint firstItem="AsO-Cj-LCz" firstAttribute="leading" secondItem="7XK-0D-EXP" secondAttribute="leading" id="Egz-g6-fsg"/>
                                                             <constraint firstItem="LqE-nf-tn6" firstAttribute="leading" secondItem="7XK-0D-EXP" secondAttribute="leading" id="J0p-B8-I07"/>
+                                                            <constraint firstItem="Lzq-Uo-efs" firstAttribute="leading" secondItem="7XK-0D-EXP" secondAttribute="leading" id="Y9u-lo-iwq"/>
                                                             <constraint firstAttribute="trailing" secondItem="LqE-nf-tn6" secondAttribute="trailing" id="hMn-fQ-KHg"/>
                                                             <constraint firstItem="AsO-Cj-LCz" firstAttribute="top" secondItem="LqE-nf-tn6" secondAttribute="bottom" constant="35" id="nUH-Yi-P7S"/>
                                                             <constraint firstAttribute="bottom" secondItem="AsO-Cj-LCz" secondAttribute="bottom" id="sUg-E2-qVv"/>
+                                                            <constraint firstItem="4hx-zq-iTM" firstAttribute="top" secondItem="Lzq-Uo-efs" secondAttribute="bottom" constant="26" id="tSQ-Um-sHJ"/>
                                                             <constraint firstItem="LqE-nf-tn6" firstAttribute="top" secondItem="7XK-0D-EXP" secondAttribute="top" id="tmP-HK-xBC"/>
                                                         </constraints>
                                                     </view>
@@ -484,6 +493,7 @@
                         <outlet property="dateOfBirthTextField" destination="5PI-LL-T9F" id="KH1-oj-x0c"/>
                         <outlet property="emailSubscriptionsDetailsTextView" destination="xYD-c5-6Gy" id="R7I-5d-fdy"/>
                         <outlet property="nationalityTextField" destination="fIj-3j-taV" id="HMV-c7-XlZ"/>
+                        <outlet property="passwordHintView" destination="Lzq-Uo-efs" id="cLx-vV-Jas"/>
                         <outlet property="postalZipCodeTextField" destination="NtD-cd-OY6" id="EYF-6A-gto"/>
                         <outlet property="streetAndNumberTextField" destination="XOT-Ui-rxi" id="gqk-Z9-g1G"/>
                     </connections>

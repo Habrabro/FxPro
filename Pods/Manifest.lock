@@ -1,26 +1,29 @@
 PODS:
-  - FlagPhoneNumber (0.8.0):
-    - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
-  - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
   - IQKeyboardManagerSwift (6.5.4)
+  - PhoneNumberKit (3.1.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.1.0)
+    - PhoneNumberKit/UIKit (= 3.1.0)
+  - PhoneNumberKit/PhoneNumberKitCore (3.1.0)
+  - PhoneNumberKit/UIKit (3.1.0):
+    - PhoneNumberKit/PhoneNumberKitCore
   - TweeTextField (1.6.0)
 
 DEPENDENCIES:
-  - FlagPhoneNumber
   - IQKeyboardManagerSwift
+  - PhoneNumberKit (~> 3.1)
   - TweeTextField
 
 SPEC REPOS:
-  trunk:
-    - FlagPhoneNumber
+  https://github.com/CocoaPods/Specs.git:
     - IQKeyboardManagerSwift
+    - PhoneNumberKit
     - TweeTextField
 
 SPEC CHECKSUMS:
-  FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
   IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
+  PhoneNumberKit: adffe4e128af1918386e09e7421d3d851a2987af
   TweeTextField: 2bfb6c48fdbf6eb8038260430244c9f6ebb47bce
 
-PODFILE CHECKSUM: dcbcc7422271f900792d3603f8aa50ab9e7828d3
+PODFILE CHECKSUM: 4a4efee0c716db78d24224b3ac5b94cc027cd2bd
 
 COCOAPODS: 1.8.4

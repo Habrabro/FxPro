@@ -32,6 +32,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var emailSubscriptionsDetailsTextView: DetailsTextView!    
     
+    @IBOutlet weak var passwordHintView: PasswordHintView!
+    
     // MARK: Public properties
     
     // MARK: Private properties
@@ -60,7 +62,7 @@ class ViewController: UIViewController {
         // cityTownTextField
         
         let cityTownValidator = ValidatorFactory.validatorFor(type: .cityTown)
-        cityTownTextField.setup(validator: cityTownValidator)
+        cityTownTextField.setup(validator: cityTownValidator, hintView: passwordHintView)
         
         // nationalityTextField
         

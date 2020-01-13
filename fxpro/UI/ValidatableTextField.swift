@@ -18,11 +18,13 @@ class ValidatableTextField: TweeAttributedTextField {
     // MARK: Private properties
     
     private var validator: Validator?
+    private var hintView: UIView?
     
     // MARK: Public methods
     
-    func setup(validator: Validator) {
+    func setup(validator: Validator, hintView: UIView? = nil) {
         self.validator = validator
+        self.hintView = hintView
         
         let imageView = UIImageView(image: UIImage(named: "validIcon"))
         rightView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: imageView.frame.width, height: self.frame.height)))
@@ -30,6 +32,7 @@ class ValidatableTextField: TweeAttributedTextField {
         rightView!.isHidden = true
         rightViewMode = .always
         
+        addTarget(self, action: #selector(editingDidBegin), for: .editingDidBegin)
         addTarget(self, action: #selector(editingDidEnd), for: .editingDidEnd)
     }
     
@@ -47,9 +50,19 @@ class ValidatableTextField: TweeAttributedTextField {
         })
     }
     
+    func switchHintVisibility() {
+        guard let hintView = self.hintView else { return }
+        hintView.isHidden = !hintView.isHidden
+    }
+    
     // MARK: Selectors
+    
+    @objc private func editingDidBegin() {
+        switchHintVisibility()
+    }
     
     @objc private func editingDidEnd() {
         validate()
+        switchHintVisibility()
     }
 }
